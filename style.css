@@ -1,66 +1,77 @@
-/* =========================
-   GENERAL PAGE DESIGN
-   ========================= */
+/* =================================
+   EXTERNAL CSS
+   Student Registration System
+   ================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* BODY */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f5f9;
-    color: #333;
     margin: 0;
-    padding: 30px;
-}
-
-.container {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
+    padding: 35px 25px;
+    background-color: #f2f4f7;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* =========================
-   MAIN TITLE
-   ========================= */
+/* HEADER */
 
-#title {
+header {
     text-align: center;
-    color: #1f4e79;
-    margin-bottom: 30px;
-    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 
-/* =========================
-   FORM STYLING
-   ========================= */
+/* MAIN LAYOUT */
 
-.form-container {
-    background-color: white;
-    padding: 30px;
-    margin-bottom: 30px;
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* FORM CARD */
+
+.form-card,
+.table-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
     border-radius: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 28px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
-h2 {
-    color: #1f4e79;
-    margin-top: 0;
-    margin-bottom: 20px;
+
+/* FORM SPACING */
+
+.form-row {
+    margin-bottom: 28px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
 
-form > label {
+/* LABELS */
+
+label,
+legend {
+    display: block;
+    font-size: 17px;
     font-weight: bold;
-    margin-top: 12px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 
-/* Text fields */
+/* INPUTS */
 
 input[type="text"],
 input[type="email"],
@@ -70,161 +81,182 @@ input[type="date"],
 select,
 textarea {
     width: 100%;
-    padding: 11px;
-    box-sizing: border-box;
-    border: 1px solid #bbb;
-    border-radius: 6px;
+    padding: 10px 12px;
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-family: inherit;
     font-size: 15px;
-    background-color: #fff;
 }
 
 
-/* Focus effect */
+/* FOCUS PSEUDO-CLASS */
 
 input:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #1f4e79;
-    box-shadow: 0 0 5px rgba(31, 78, 121, 0.25);
+    border-color: #555555;
+    box-shadow: 0 0 0 2px rgba(80, 80, 80, 0.12);
 }
 
 
-/* Gender and skills */
+/* FIELDSET */
 
-.options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 5px;
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 28px;
 }
 
-.options label {
-    font-weight: normal;
+
+/* RADIO AND CHECKBOX */
+
+.choice {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+    margin: 8px 0;
+    font-weight: normal;
+}
+
+.choice input {
+    width: 19px;
+    height: 19px;
+    margin: 0;
+}
+
+.choice span {
+    font-size: 17px;
 }
 
 
-/* Buttons */
+/* TEXTAREA */
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* BUTTONS */
 
 .buttons {
     display: flex;
-    gap: 12px;
-    margin-top: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
 }
 
 button {
-    padding: 11px 25px;
+    width: 102px;
+    padding: 9px 12px;
     border: none;
-    border-radius: 6px;
-    font-size: 15px;
+    border-radius: 4px;
+    color: white;
+    font-size: 13px;
     cursor: pointer;
 }
 
-#register {
-    background-color: #1f4e79;
-    color: white;
+
+/* ID SELECTORS */
+
+#registerBtn {
+    background-color: #333333;
 }
 
-#clear {
-    background-color: #777;
-    color: white;
+#clearBtn {
+    background-color: #888888;
 }
 
 
-/* Button hover pseudo-class */
+/* HOVER PSEUDO-CLASS */
 
-#register:hover,
-#clear:hover {
+button:hover {
     opacity: 0.85;
-    transform: translateY(-2px);
 }
 
 
-/* =========================
-   TABLE STYLING
-   ========================= */
+/* LINE */
+
+hr {
+    border: 0;
+    border-top: 1px solid #777777;
+    margin: 28px 0;
+}
+
+
+/* TABLE TITLE */
+
+.table-card h2 {
+    text-align: center;
+    font-size: 22px;
+    margin: 0 0 22px;
+}
+
+
+/* TABLE */
 
 .table-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    overflow-x: auto;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    font-size: 14px;
 }
 
 
-/* Element selector */
+/* TABLE ELEMENT SELECTORS */
 
 th,
 td {
-    border: 1px solid #bbb;
-    padding: 13px;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: left;
+}
+
+
+/* TABLE HEADER */
+
+th {
+    background-color: #333333;
+    color: white;
     text-align: center;
 }
 
 
-/* Table header */
-
-th {
-    background-color: #1f4e79;
-    color: white;
-    font-weight: bold;
-}
-
-
-/* Row hover effect */
-
-tbody tr:hover {
-    background-color: #e8f1f8;
-}
-
-
-/* Alternating rows */
+/* PSEUDO-CLASS SELECTORS */
 
 tbody tr:nth-child(even) {
-    background-color: #f7f9fb;
+    background-color: #f5f5f5;
+}
+
+tbody tr:hover {
+    background-color: #e8e8e8;
 }
 
 
-/* =========================
-   RESPONSIVE DESIGN
-   ========================= */
+/* RESPONSIVE DESIGN */
 
-@media screen and (max-width: 700px) {
+@media (max-width: 600px) {
 
     body {
-        padding: 15px;
+        padding: 30px 25px;
     }
 
-    .container {
-        width: 100%;
+    h1 {
+        font-size: 25px;
     }
 
-    .form-container,
-    .table-container {
-        padding: 20px;
+    .form-card,
+    .table-card {
+        padding: 25px;
     }
 
     table {
-        font-size: 13px;
-    }
-
-    th,
-    td {
-        padding: 8px;
-    }
-
-    .options {
-        flex-direction: column;
-        gap: 8px;
+        min-width: 700px;
     }
 }
