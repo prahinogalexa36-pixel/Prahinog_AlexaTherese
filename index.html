@@ -3,426 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
 
-    <title>Student Registration Form</title>
-
-    <!-- EXTERNAL CSS -->
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="page-header">
-        <div class="header-content">
-            <p class="school-label">PELEC 2 • 2C</p>
-            <h1>Student Registration</h1>
-            <p class="subtitle">
-                Registration Form and Student Information Table
-            </p>
-        </div>
-    </header>
+    <div class="container">
 
-    <main class="container">
+        <h1 id="title">Student Registration System</h1>
 
-        <!-- ================= FORM SECTION ================= -->
-        <section class="card">
-            <div class="section-heading">
-                <span class="section-number">01</span>
-                <div>
-                    <h2>Registration Form</h2>
-                    <p>Please complete all required information.</p>
-                </div>
-            </div>
+        <!-- FORM -->
+        <section class="form-container">
+            <h2>Student Registration</h2>
 
-            <form id="registrationForm">
+            <form>
 
-                <div class="form-grid">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
 
-                    <!-- First Name -->
-                    <div class="form-group">
-                        <label for="firstName">
-                            First Name <span>*</span>
-                        </label>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-                        <input
-                            type="text"
-                            id="firstName"
-                            name="firstName"
-                            placeholder="Enter your first name"
-                            required
-                        >
-                    </div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
 
-                    <!-- Last Name -->
-                    <div class="form-group">
-                        <label for="lastName">
-                            Last Name <span>*</span>
-                        </label>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" required>
 
-                        <input
-                            type="text"
-                            id="lastName"
-                            name="lastName"
-                            placeholder="Enter your last name"
-                            required
-                        >
-                    </div>
+                <label for="birthdate">Birth Date:</label>
+                <input type="date" id="birthdate" name="birthdate">
 
-                    <!-- Student ID -->
-                    <div class="form-group">
-                        <label for="studentId">
-                            Student ID <span>*</span>
-                        </label>
+                <label>Gender:</label>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="gender" value="Male">
+                        Male
+                    </label>
 
-                        <input
-                            type="text"
-                            id="studentId"
-                            name="studentId"
-                            placeholder="e.g. 2026-00001"
-                            required
-                        >
-                    </div>
-
-                    <!-- Email -->
-                    <div class="form-group">
-                        <label for="email">
-                            Email Address <span>*</span>
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="example@email.com"
-                            required
-                        >
-                    </div>
-
-                    <!-- Phone -->
-                    <div class="form-group">
-                        <label for="phone">
-                            Phone Number
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="09XXXXXXXXX"
-                        >
-                    </div>
-
-                    <!-- Birth Date -->
-                    <div class="form-group">
-                        <label for="birthdate">
-                            Birth Date <span>*</span>
-                        </label>
-
-                        <input
-                            type="date"
-                            id="birthdate"
-                            name="birthdate"
-                            required
-                        >
-                    </div>
-
-                    <!-- Gender -->
-                    <div class="form-group">
-                        <label for="gender">
-                            Gender <span>*</span>
-                        </label>
-
-                        <select id="gender" name="gender" required>
-                            <option value="" disabled selected>
-                                Select gender
-                            </option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Prefer not to say">
-                                Prefer not to say
-                            </option>
-                        </select>
-                    </div>
-
-                    <!-- Course -->
-                    <div class="form-group">
-                        <label for="course">
-                            Course <span>*</span>
-                        </label>
-
-                        <select id="course" name="course" required>
-                            <option value="" disabled selected>
-                                Select course
-                            </option>
-                            <option value="BSIT">
-                                Bachelor of Science in Information Technology
-                            </option>
-                            <option value="BSCS">
-                                Bachelor of Science in Computer Science
-                            </option>
-                            <option value="BSEd">
-                                Bachelor of Secondary Education
-                            </option>
-                            <option value="BSBA">
-                                Bachelor of Science in Business Administration
-                            </option>
-                        </select>
-                    </div>
-
-                    <!-- Year Level -->
-                    <div class="form-group">
-                        <label for="yearLevel">
-                            Year Level <span>*</span>
-                        </label>
-
-                        <select id="yearLevel" name="yearLevel" required>
-                            <option value="" disabled selected>
-                                Select year level
-                            </option>
-                            <option value="1st Year">1st Year</option>
-                            <option value="2nd Year">2nd Year</option>
-                            <option value="3rd Year">3rd Year</option>
-                            <option value="4th Year">4th Year</option>
-                        </select>
-                    </div>
-
-                    <!-- Address -->
-                    <div class="form-group full-width">
-                        <label for="address">
-                            Address <span>*</span>
-                        </label>
-
-                        <textarea
-                            id="address"
-                            name="address"
-                            rows="4"
-                            placeholder="Enter your complete address"
-                            required
-                        ></textarea>
-                    </div>
-
-                </div>
-
-                <!-- Radio Buttons -->
-                <fieldset>
-                    <legend>Preferred Learning Mode</legend>
-
-                    <div class="radio-group">
-
-                        <label class="radio-option">
-                            <input
-                                type="radio"
-                                name="learningMode"
-                                value="Face-to-Face"
-                                required
-                            >
-                            <span>Face-to-Face</span>
-                        </label>
-
-                        <label class="radio-option">
-                            <input
-                                type="radio"
-                                name="learningMode"
-                                value="Online"
-                            >
-                            <span>Online</span>
-                        </label>
-
-                        <label class="radio-option">
-                            <input
-                                type="radio"
-                                name="learningMode"
-                                value="Hybrid"
-                            >
-                            <span>Hybrid</span>
-                        </label>
-
-                    </div>
-                </fieldset>
-
-                <!-- Terms -->
-                <div class="checkbox-group">
-                    <label class="checkbox-option">
-                        <input
-                            type="checkbox"
-                            id="agreement"
-                            name="agreement"
-                            required
-                        >
-                        <span>
-                            I confirm that the information I provided is
-                            complete and accurate.
-                        </span>
+                    <label>
+                        <input type="radio" name="gender" value="Female">
+                        Female
                     </label>
                 </div>
 
-                <!-- Buttons -->
-                <div class="button-group">
+                <label for="course">Course:</label>
+                <select id="course" name="course">
+                    <option value="">-- Select Course --</option>
+                    <option value="BSIT">BSIT</option>
+                    <option value="CAS">CAS</option>
+                    <option value="BEED">BEED</option>
+                    <option value="BSHM">BSHM</option>
+                </select>
 
-                    <button type="submit" class="btn btn-primary">
-                        Submit Registration
-                    </button>
+                <label>Skills:</label>
+                <div class="options">
+                    <label>
+                        <input type="checkbox" name="skill" value="Leadership">
+                        Leadership
+                    </label>
 
-                    <button type="reset" class="btn btn-secondary">
-                        Clear Form
-                    </button>
+                    <label>
+                        <input type="checkbox" name="skill" value="Time Management">
+                        Time Management
+                    </label>
 
+                    <label>
+                        <input type="checkbox" name="skill" value="Programming">
+                        Programming
+                    </label>
                 </div>
 
-                <p id="successMessage" class="success-message">
-                    Registration submitted successfully!
-                </p>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4"></textarea>
+
+                <div class="buttons">
+                    <button type="submit" id="register">Register</button>
+                    <button type="reset" id="clear">Clear</button>
+                </div>
 
             </form>
         </section>
 
 
-        <!-- ================= TABLE SECTION ================= -->
-        <section class="card">
+        <!-- TABLE -->
+        <section class="table-container">
 
-            <div class="section-heading">
-                <span class="section-number">02</span>
+            <h2>Student Records</h2>
 
-                <div>
-                    <h2>Student Information</h2>
-                    <p>List of registered students.</p>
-                </div>
-            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Full Name</th>
+                        <th>Course</th>
+                        <th>Year Level</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
 
-            <div class="table-wrapper">
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Alexa Therese Prahinog</td>
+                        <td>BSIT</td>
+                        <td>2nd Year</td>
+                        <td>prahinogalexa36@gmail.com</td>
+                    </tr>
 
-                <table>
+                    <tr>
+                        <td>002</td>
+                        <td>John Cruz</td>
+                        <td>CAS</td>
+                        <td>2nd Year</td>
+                        <td>john@gmail.com</td>
+                    </tr>
 
-                    <caption>
-                        Registered Student Records
-                    </caption>
+                    <tr>
+                        <td>003</td>
+                        <td>Maria Santos</td>
+                        <td>BEED</td>
+                        <td>1st Year</td>
+                        <td>maria@gmail.com</td>
+                    </tr>
 
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>Student ID</th>
-                            <th>Name</th>
-                            <th>Course</th>
-                            <th>Year</th>
-                            <th>Email</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
+                    <tr>
+                        <td>004</td>
+                        <td>Mark Reyes</td>
+                        <td>BSHM</td>
+                        <td>2nd Year</td>
+                        <td>mark@gmail.com</td>
+                    </tr>
 
-                    <tbody>
-
-                        <tr>
-                            <td>1</td>
-                            <td>2026-00001</td>
-                            <td class="student-name">
-                                Juan Dela Cruz
-                            </td>
-                            <td>BSIT</td>
-                            <td>2nd Year</td>
-                            <td>juan@email.com</td>
-                            <td>
-                                <span class="status active">
-                                    Active
-                                </span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>2026-00002</td>
-                            <td class="student-name">
-                                Maria Santos
-                            </td>
-                            <td>BSCS</td>
-                            <td>2nd Year</td>
-                            <td>maria@email.com</td>
-                            <td>
-                                <span class="status active">
-                                    Active
-                                </span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>3</td>
-                            <td>2026-00003</td>
-                            <td class="student-name">
-                                Pedro Garcia
-                            </td>
-                            <td>BSIT</td>
-                            <td>1st Year</td>
-                            <td>pedro@email.com</td>
-                            <td>
-                                <span class="status pending">
-                                    Pending
-                                </span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>4</td>
-                            <td>2026-00004</td>
-                            <td class="student-name">
-                                Ana Reyes
-                            </td>
-                            <td>BSBA</td>
-                            <td>3rd Year</td>
-                            <td>ana@email.com</td>
-                            <td>
-                                <span class="status active">
-                                    Active
-                                </span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>5</td>
-                            <td>2026-00005</td>
-                            <td class="student-name">
-                                Carlo Mendoza
-                            </td>
-                            <td>BSEd</td>
-                            <td>4th Year</td>
-                            <td>carlo@email.com</td>
-                            <td>
-                                <span class="status inactive">
-                                    Inactive
-                                </span>
-                            </td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
+                    <tr>
+                        <td>005</td>
+                        <td>Anna Garcia</td>
+                        <td>BSIT</td>
+                        <td>2nd Year</td>
+                        <td>anna@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
 
         </section>
 
-    </main>
-
-
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <p>
-            &copy; 2026 Student Registration System
-        </p>
-    </footer>
-
-
-    <!-- Small functionality for form submission -->
-    <script>
-        const form = document.getElementById("registrationForm");
-        const message = document.getElementById("successMessage");
-
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            message.classList.add("show");
-
-            form.reset();
-        });
-    </script>
+    </div>
 
 </body>
 </html>
