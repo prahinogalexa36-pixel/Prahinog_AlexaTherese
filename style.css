@@ -1,20 +1,17 @@
-/* =================================
+/* =====================================
    EXTERNAL CSS
    Student Registration System
-   ================================= */
+   ===================================== */
 
 * {
     box-sizing: border-box;
 }
 
-
-/* BODY */
-
 body {
     margin: 0;
     padding: 35px 25px;
     background-color: #f2f4f7;
-    color: #333333;
+    color: #333;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -29,15 +26,15 @@ header {
 h1 {
     margin: 0;
     font-size: 28px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 
-/* MAIN LAYOUT */
+/* MAIN */
 
 main {
     max-width: 900px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 
@@ -45,25 +42,21 @@ main {
 
 .form-card,
 .table-card {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
+    background-color: white;
+    border: 1px solid #ddd;
     border-radius: 10px;
     padding: 28px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
 
-/* FORM SPACING */
+/* FORM */
 
-.form-row {
+.form-group {
     margin-bottom: 28px;
 }
 
-
-/* LABELS */
-
-label,
-legend {
+.form-group > label {
     display: block;
     font-size: 17px;
     font-weight: bold;
@@ -84,50 +77,38 @@ textarea {
     padding: 10px 12px;
     border: 1px solid #c9c9c9;
     border-radius: 5px;
-    background-color: #ffffff;
-    font-family: inherit;
+    background-color: white;
     font-size: 15px;
+    font-family: inherit;
 }
 
 
-/* FOCUS PSEUDO-CLASS */
+/* FOCUS SELECTOR */
 
 input:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #555555;
+    border-color: #555;
     box-shadow: 0 0 0 2px rgba(80, 80, 80, 0.12);
-}
-
-
-/* FIELDSET */
-
-fieldset {
-    border: none;
-    padding: 0;
-    margin: 0 0 28px;
 }
 
 
 /* RADIO AND CHECKBOX */
 
-.choice {
+.options label {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin: 8px 0;
+    margin: 9px 0;
+    font-size: 17px;
     font-weight: normal;
 }
 
-.choice input {
-    width: 19px;
-    height: 19px;
+.options input {
+    width: 18px;
+    height: 18px;
     margin: 0;
-}
-
-.choice span {
-    font-size: 17px;
 }
 
 
@@ -162,15 +143,15 @@ button {
 /* ID SELECTORS */
 
 #registerBtn {
-    background-color: #333333;
+    background-color: #333;
 }
 
 #clearBtn {
-    background-color: #888888;
+    background-color: #888;
 }
 
 
-/* HOVER PSEUDO-CLASS */
+/* HOVER SELECTOR */
 
 button:hover {
     opacity: 0.85;
@@ -181,7 +162,7 @@ button:hover {
 
 hr {
     border: 0;
-    border-top: 1px solid #777777;
+    border-top: 1px solid #777;
     margin: 28px 0;
 }
 
@@ -197,32 +178,21 @@ hr {
 
 /* TABLE */
 
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
     font-size: 14px;
 }
 
-
-/* TABLE ELEMENT SELECTORS */
-
 th,
 td {
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
 }
 
-
-/* TABLE HEADER */
-
 th {
-    background-color: #333333;
+    background-color: #333;
     color: white;
     text-align: center;
 }
@@ -239,7 +209,7 @@ tbody tr:hover {
 }
 
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE */
 
 @media (max-width: 600px) {
 
